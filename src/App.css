@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+}
+
+.full-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: khaki;
+}
+
+.search-container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(126, 120, 120, 0.2);
+  text-align: center;
+  /* Uncomment this line to position search box at the top */
+  top: 0px;
+  width: 60%;
+  max-height: 200px;
+  overflow-y: auto;
+  display: inline;
+}
+
+h1 {
+  color: #3498db;
+  font-weight: 700;
+}
+
+input {
+  padding: 10px;
+  width: 60%;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #b280db;
+  box-shadow: 0 0 5px rgba(127, 219, 52, 0.5);
+}
+
+button {
+  background-color: #82b1d1;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, button:active {
+  background-color: #5bb38e;
+  box-shadow: 0 0 10px rgba(191, 219, 191, 0.5);
+}
+
+#autocomplete {
+  width: 60%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(173, 106, 106, 0.1);
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(173, 106, 106, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.data-display p {
+  color: white;
+  text-align: center;
+  margin: 10px 0;
+}
+
+p {
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    width: 80%;
+  }
+
+  input, button {
+    width: 100%;
+  }
+}
+
+ 
